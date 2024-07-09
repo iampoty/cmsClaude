@@ -24,7 +24,7 @@ Apps: flutter + dart
 
 ## Screenshots
 
-![Screenshot 1](https://raw.githubusercontent.com/iampoty/cmsClaude/main/screenshots/screenshot1.png)
+![Screenshot 1](screenshot/screenshot1.png)
 
 ## Backend
 
