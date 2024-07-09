@@ -10,6 +10,22 @@ Frontend: vue.js + vue-router + axios + vue
 
 Apps: flutter + dart
 
+## Features
+
+- Login
+- Create Article
+- Update Article
+- Delete Article
+- View Article
+- View Logs (System Logs)
+- View Admin Actions (Create User, Delete User)
+- User Roles (Admin, User)
+- Flutter Apps support (Web, Android, iOS), Responsive UI
+
+## Screenshots
+
+![Screenshot 1](https://raw.githubusercontent.com/iampoty/cmsClaude/main/screenshots/screenshot1.png)
+
 ## Backend
 
 ### Install
