@@ -53,10 +53,10 @@ class ArticleService {
 
     if (response.statusCode == 200) {
       final List<dynamic> jsonData = json.decode(response.body);
-      log("!!!!!!!!!!!!!!!!!!!!!jsonData in getArticles$jsonData");
+      // log("!!!!!!!!!!!!!!!!!!!!!jsonData in getArticles$jsonData");
       return jsonData.map((json) => Article.fromJson(json)).toList();
     } else {
-      log("!!!!!!!!!!!!!!!!!!!!!error in getArticles");
+      // log("!!!!!!!!!!!!!!!!!!!!!error in getArticles");
       // debugPrint("error in getArticles");
       throw Exception('Failed to load articles');
     }

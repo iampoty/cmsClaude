@@ -10,43 +10,57 @@ class ArticleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.all(8.0),
+      elevation: 4,
       child: InkWell(
         onTap: onTap,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (article.thumbnail != null)
-              Image.network(
-                article.thumbnail!,
-                height: 200,
-                width: double.infinity,
-                fit: BoxFit.cover,
+              Expanded(
+                flex: 3,
+                child: Image.network(
+                  article.thumbnail!,
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                ),
               ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    article.title,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const SizedBox(height: 8.0),
-                  Text(
-                    article.content.length > 100
-                        ? '${article.content.substring(0, 100)}...'
-                        : article.content,
-                  ),
-                  const SizedBox(height: 8.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(article.createDate.toString()),
-                      _buildStatusChip(article.status),
-                    ],
-                  ),
-                ],
+            Expanded(
+              flex: 4,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      article.title,
+                      style: Theme.of(context).textTheme.titleLarge,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 8.0),
+                    Expanded(
+                      child: Text(
+                        article.content,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    const SizedBox(height: 8.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            article.createDate.toString(),
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ),
+                        _buildStatusChip(article.status),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -76,8 +90,9 @@ class ArticleCard extends StatelessWidget {
         color = Colors.blue;
     }
     return Chip(
-      label: Text(label),
+      label: Text(label, style: const TextStyle(fontSize: 10)),
       backgroundColor: color,
+      padding: const EdgeInsets.all(4),
     );
   }
 }
