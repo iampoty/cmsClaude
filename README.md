@@ -4,9 +4,11 @@ Created from Claude.ai
 
 ## Tech Stack
 
-Backend: go + mongodb + jwt + cors
-Frontend: vue.js + vue-router + axios + vuex
-Apps: flutter + dart
+Backend: go + mongodb + jwt + cors\
+
+Frontend: vue.js + vue-router + axios + vue\
+
+Apps: flutter + dart\
 
 ## Backend
 
