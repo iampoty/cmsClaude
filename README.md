@@ -24,7 +24,7 @@ Apps: flutter + dart
 
 ## Screenshots
 
-![Screenshot 1](screenshot/screenshot1.png)
+![Screenshot 0](screenshot/screenshot0.png)
 
 ## Backend
 
