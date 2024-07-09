@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: constraints.maxWidth > 900 ? 3 : 1,
                       childAspectRatio: 0.7, // ปรับอัตราส่วนนี้ตามความเหมาะสม
-                      crossAxisSpacing: 10,
+                      crossAxisSpacing: 20,
                       mainAxisSpacing: 10,
                     ),
                     itemCount: _articles.length + 1,
