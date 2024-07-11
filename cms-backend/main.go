@@ -273,7 +273,7 @@ func createInitialAdminUser() {
 		return
 	}
 
-	hashedPassword, err := bcrypt.GenerateFromPassword([]byte("tthhaarriinn"), bcrypt.DefaultCost)
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte("xxxxxxxx"), bcrypt.DefaultCost)
 	if err != nil {
 		log.Fatal(err)
 	}
